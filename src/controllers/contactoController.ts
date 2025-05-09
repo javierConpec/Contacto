@@ -12,6 +12,7 @@ export const postContacto = async (
     const errores = validarContacto(datos);
   
     if (errores.length > 0) {
+      
       res.status(400).json({ errores });
       return;
     }
