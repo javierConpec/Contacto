@@ -17,11 +17,13 @@ export const postContacto = async (
     }
   
     try {
+      console.log("Enviando correo con datos:", datos);
       const resultado = await enviarCorreoContacto(datos);
       res.status(200).json({ mensaje: "Mensaje enviado correctamente", idMensaje: resultado.messageId });
     } catch (err) {
-      console.error(err);
+      console.error("Error al enviar correo:", err);
       res.status(500).json({ mensaje: "Error al enviar el mensaje" });
     }
+    
   };
   
