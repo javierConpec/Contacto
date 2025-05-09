@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+
 app.use(express.json());
 app.use("/api", contactoRoutes); // Usa el enrutador correctamente
 
