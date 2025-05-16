@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createCheckoutSession } from "../services/stripe.service";
+import { createCheckoutSession } from "../services/stripeService";
 
 export const handlePayment = async (req: Request, res: Response) => {
   try {
